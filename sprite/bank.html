@@ -1,0 +1,374 @@
+
+		<!doctype html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<title>Document</title>
+			<script src="http://code.jquery.com/jquery-1.7.2.js" ></script>
+			<style>
+		
+			.bank_list li {
+				float: left;
+				padding: 10px 0;
+				width: 180px;
+				overflow: hidden;
+			}
+			.bank_list li .radio{
+				float: left;
+				margin: 8px 2px 0 2px;
+			}
+			.bank_list li .bank_label{ float: left; border:1px solid #e2e2e2; }
+			.bank_list li .hover,.bank_list li .checked{
+				border:1px solid #F60;
+			}
+			.bank_abc,.bank_arcu,.bank_aycb,.bank_bankwf,.bank_bgb,.bank_bhb,.bank_bjbank,.bank_boc,.bank_bocd,.bank_bocy,.bank_bod,.bank_bodd,.bank_bojz,.bank_bop,.bank_boqh,.bank_bosz,.bank_boyk,.bank_bozk,.bank_bsb,.bank_bzmd,.bank_cabank,.bank_cbkf,.bank_ccb,.bank_ccqtgb,.bank_cdcb,.bank_cdrcb,.bank_ceb,.bank_cgnb,.bank_cib,.bank_citic,.bank_cmb,.bank_cmbc,.bank_comm,.bank_cqbank,.bank_crcbank,.bank_cscb,.bank_csrcb,.bank_czcb,.bank_czccb,.bank_czrcb,.bank_daqingb,.bank_dbscn,.bank_dlb,.bank_drcbcl,.bank_dycb,.bank_dyccb,.bank_dzbank,.bank_egbank,.bank_fjhxbc,.bank_fscb,.bank_fxcb,.bank_gcb,.bank_gdb,.bank_gdrcc,.bank_glbank,.bank_grcb,.bank_gsrcu,.bank_gxrcu,.bank_gycb,.bank_gzb,.bank_gzrcu,.bank_h3cb,.bank_hanabank,.bank_hbc,.bank_hbrcu,.bank_hdbank,.bank_hkb,.bank_hnrcc,.bank_hnrcu,.bank_hsbank,.bank_hsbc,.bank_hsbk,.bank_hurcb,.bank_hxbank,.bank_hzcb,.bank_icbc,.bank_jhbank,.bank_jinchb,.bank_jjbank,.bank_jlrcu,.bank_jnbank,.bank_jrcb,.bank_jsb,.bank_jsbank,.bank_jxbank,.bank_jxrcu,.bank_jzbank,.bank_klb,.bank_ksrb,.bank_lsbank,.bank_lsbc,.bank_lsccb,.bank_lzccb,.bank_lzyh,.bank_nbbank,.bank_nbyz,.bank_ncb,.bank_ndhb,.bank_nhb,.bank_njcb,.bank_nxbank,.bank_nxrcu,.bank_nycb,.bank_orbank,.bank_psbc,.bank_pzhccb,.bank_qdccb,.bank_qlbank,.bank_rzb,.bank_scb,.bank_scbbank,.bank_sccb,.bank_scrcu,.bank_sdb,.bank_sdeb,.bank_sdrcu,.bank_shbank,.bank_shrcb,.bank_sjbank,.bank_spabank,.bank_srbank,.bank_srcb,.bank_sxcb,.bank_sxrccu,.bank_szsbk,.bank_taccb,.bank_tccb,.bank_tcrcb,.bank_whbank,.bank_whccb,.bank_whrcb,.bank_wjrcb,.bank_wrcb,.bank_wzcb,.bank_xabank,.bank_xcyh,.bank_xlbank,.bank_xtb,.bank_xxbank,.bank_xybank,.bank_ybccb,.bank_ynrcc,.bank_yqccb,.bank_yxccb,.bank_zgccb,.bank_zjkccb,.bank_zjnx,.bank_zjtlcb,.bank_zrcbank,.bank_zycbank,.bank_zzbank
+			{ width: 126px;  height: 36px; background-image:url(
+			bank_alipay_1376466823.35.png
+			); background-repeat:no-repeat; cursor: pointer; display:block; }
+
+			.bank_abc { background-position: 0 0; } 
+	.bank_arcu { background-position: 0 -36px; } 
+	.bank_aycb { background-position: 0 -72px; } 
+	.bank_bankwf { background-position: 0 -108px; } 
+	.bank_bgb { background-position: 0 -144px; } 
+	.bank_bhb { background-position: 0 -180px; } 
+	.bank_bjbank { background-position: 0 -216px; } 
+	.bank_boc { background-position: 0 -252px; } 
+	.bank_bocd { background-position: 0 -288px; } 
+	.bank_bocy { background-position: 0 -324px; } 
+	.bank_bod { background-position: 0 -360px; } 
+	.bank_bodd { background-position: 0 -396px; } 
+	.bank_bojz { background-position: 0 -432px; } 
+	.bank_bop { background-position: 0 -468px; } 
+	.bank_boqh { background-position: 0 -504px; } 
+	.bank_bosz { background-position: 0 -540px; } 
+	.bank_boyk { background-position: 0 -576px; } 
+	.bank_bozk { background-position: 0 -612px; } 
+	.bank_bsb { background-position: 0 -648px; } 
+	.bank_bzmd { background-position: 0 -684px; } 
+	.bank_cabank { background-position: 0 -720px; } 
+	.bank_cbkf { background-position: 0 -756px; } 
+	.bank_ccb { background-position: 0 -792px; } 
+	.bank_ccqtgb { background-position: 0 -828px; } 
+	.bank_cdcb { background-position: 0 -864px; } 
+	.bank_cdrcb { background-position: 0 -900px; } 
+	.bank_ceb { background-position: 0 -936px; } 
+	.bank_cgnb { background-position: 0 -972px; } 
+	.bank_cib { background-position: 0 -1008px; } 
+	.bank_citic { background-position: 0 -1044px; } 
+	.bank_cmb { background-position: 0 -1080px; } 
+	.bank_cmbc { background-position: 0 -1116px; } 
+	.bank_comm { background-position: 0 -1152px; } 
+	.bank_cqbank { background-position: 0 -1188px; } 
+	.bank_crcbank { background-position: 0 -1224px; } 
+	.bank_cscb { background-position: 0 -1260px; } 
+	.bank_csrcb { background-position: 0 -1296px; } 
+	.bank_czcb { background-position: 0 -1332px; } 
+	.bank_czccb { background-position: 0 -1368px; } 
+	.bank_czrcb { background-position: 0 -1404px; } 
+	.bank_daqingb { background-position: 0 -1440px; } 
+	.bank_dbscn { background-position: 0 -1476px; } 
+	.bank_dlb { background-position: 0 -1512px; } 
+	.bank_drcbcl { background-position: 0 -1548px; } 
+	.bank_dycb { background-position: 0 -1584px; } 
+	.bank_dyccb { background-position: 0 -1620px; } 
+	.bank_dzbank { background-position: 0 -1656px; } 
+	.bank_egbank { background-position: 0 -1692px; } 
+	.bank_fjhxbc { background-position: 0 -1728px; } 
+	.bank_fscb { background-position: 0 -1764px; } 
+	.bank_fxcb { background-position: 0 -1800px; } 
+	.bank_gcb { background-position: 0 -1836px; } 
+	.bank_gdb { background-position: 0 -1872px; } 
+	.bank_gdrcc { background-position: 0 -1908px; } 
+	.bank_glbank { background-position: 0 -1944px; } 
+	.bank_grcb { background-position: 0 -1980px; } 
+	.bank_gsrcu { background-position: 0 -2016px; } 
+	.bank_gxrcu { background-position: 0 -2052px; } 
+	.bank_gycb { background-position: 0 -2088px; } 
+	.bank_gzb { background-position: 0 -2124px; } 
+	.bank_gzrcu { background-position: 0 -2160px; } 
+	.bank_h3cb { background-position: 0 -2196px; } 
+	.bank_hanabank { background-position: 0 -2232px; } 
+	.bank_hbc { background-position: 0 -2268px; } 
+	.bank_hbrcu { background-position: 0 -2304px; } 
+	.bank_hdbank { background-position: 0 -2340px; } 
+	.bank_hkb { background-position: 0 -2376px; } 
+	.bank_hnrcc { background-position: 0 -2412px; } 
+	.bank_hnrcu { background-position: 0 -2448px; } 
+	.bank_hsbank { background-position: 0 -2484px; } 
+	.bank_hsbc { background-position: 0 -2520px; } 
+	.bank_hsbk { background-position: 0 -2556px; } 
+	.bank_hurcb { background-position: 0 -2592px; } 
+	.bank_hxbank { background-position: 0 -2628px; } 
+	.bank_hzcb { background-position: 0 -2664px; } 
+	.bank_icbc { background-position: 0 -2700px; } 
+	.bank_jhbank { background-position: 0 -2736px; } 
+	.bank_jinchb { background-position: 0 -2772px; } 
+	.bank_jjbank { background-position: 0 -2808px; } 
+	.bank_jlrcu { background-position: 0 -2844px; } 
+	.bank_jnbank { background-position: 0 -2880px; } 
+	.bank_jrcb { background-position: 0 -2916px; } 
+	.bank_jsb { background-position: 0 -2952px; } 
+	.bank_jsbank { background-position: 0 -2988px; } 
+	.bank_jxbank { background-position: 0 -3024px; } 
+	.bank_jxrcu { background-position: 0 -3060px; } 
+	.bank_jzbank { background-position: 0 -3096px; } 
+	.bank_klb { background-position: 0 -3132px; } 
+	.bank_ksrb { background-position: 0 -3168px; } 
+	.bank_lsbank { background-position: 0 -3204px; } 
+	.bank_lsbc { background-position: 0 -3240px; } 
+	.bank_lsccb { background-position: 0 -3276px; } 
+	.bank_lzccb { background-position: 0 -3312px; } 
+	.bank_lzyh { background-position: 0 -3348px; } 
+	.bank_nbbank { background-position: 0 -3384px; } 
+	.bank_nbyz { background-position: 0 -3420px; } 
+	.bank_ncb { background-position: 0 -3456px; } 
+	.bank_ndhb { background-position: 0 -3492px; } 
+	.bank_nhb { background-position: 0 -3528px; } 
+	.bank_njcb { background-position: 0 -3564px; } 
+	.bank_nxbank { background-position: 0 -3600px; } 
+	.bank_nxrcu { background-position: 0 -3636px; } 
+	.bank_nycb { background-position: 0 -3672px; } 
+	.bank_orbank { background-position: 0 -3708px; } 
+	.bank_psbc { background-position: 0 -3744px; } 
+	.bank_pzhccb { background-position: 0 -3780px; } 
+	.bank_qdccb { background-position: 0 -3816px; } 
+	.bank_qlbank { background-position: 0 -3852px; } 
+	.bank_rzb { background-position: 0 -3888px; } 
+	.bank_scb { background-position: 0 -3924px; } 
+	.bank_scbbank { background-position: 0 -3960px; } 
+	.bank_sccb { background-position: 0 -3996px; } 
+	.bank_scrcu { background-position: 0 -4032px; } 
+	.bank_sdb { background-position: 0 -4068px; } 
+	.bank_sdeb { background-position: 0 -4104px; } 
+	.bank_sdrcu { background-position: 0 -4140px; } 
+	.bank_shbank { background-position: 0 -4176px; } 
+	.bank_shrcb { background-position: 0 -4212px; } 
+	.bank_sjbank { background-position: 0 -4248px; } 
+	.bank_spabank { background-position: 0 -4284px; } 
+	.bank_srbank { background-position: 0 -4320px; } 
+	.bank_srcb { background-position: 0 -4356px; } 
+	.bank_sxcb { background-position: 0 -4392px; } 
+	.bank_sxrccu { background-position: 0 -4428px; } 
+	.bank_szsbk { background-position: 0 -4464px; } 
+	.bank_taccb { background-position: 0 -4500px; } 
+	.bank_tccb { background-position: 0 -4536px; } 
+	.bank_tcrcb { background-position: 0 -4572px; } 
+	.bank_whbank { background-position: 0 -4608px; } 
+	.bank_whccb { background-position: 0 -4644px; } 
+	.bank_whrcb { background-position: 0 -4680px; } 
+	.bank_wjrcb { background-position: 0 -4716px; } 
+	.bank_wrcb { background-position: 0 -4752px; } 
+	.bank_wzcb { background-position: 0 -4788px; } 
+	.bank_xabank { background-position: 0 -4824px; } 
+	.bank_xcyh { background-position: 0 -4860px; } 
+	.bank_xlbank { background-position: 0 -4896px; } 
+	.bank_xtb { background-position: 0 -4932px; } 
+	.bank_xxbank { background-position: 0 -4968px; } 
+	.bank_xybank { background-position: 0 -5004px; } 
+	.bank_ybccb { background-position: 0 -5040px; } 
+	.bank_ynrcc { background-position: 0 -5076px; } 
+	.bank_yqccb { background-position: 0 -5112px; } 
+	.bank_yxccb { background-position: 0 -5148px; } 
+	.bank_zgccb { background-position: 0 -5184px; } 
+	.bank_zjkccb { background-position: 0 -5220px; } 
+	.bank_zjnx { background-position: 0 -5256px; } 
+	.bank_zjtlcb { background-position: 0 -5292px; } 
+	.bank_zrcbank { background-position: 0 -5328px; } 
+	.bank_zycbank { background-position: 0 -5364px; } 
+	.bank_zzbank { background-position: 0 -5400px; } 
+		
+			</style>
+		</head>
+		<body>
+			<ul class="bank_list" >
+		<li>
+	<input type="radio" name="cdbank" id="cdbank_icbc" class="radio" value="cdbank_icbc">
+	<label  class="bank_label" for="cdbank_icbc"><span class="bank_icbc"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_boc" class="radio" value="cdbank_boc">
+	<label  class="bank_label" for="cdbank_boc"><span class="bank_boc"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_ccb" class="radio" value="cdbank_ccb">
+	<label  class="bank_label" for="cdbank_ccb"><span class="bank_ccb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_cmb" class="radio" value="cdbank_cmb">
+	<label  class="bank_label" for="cdbank_cmb"><span class="bank_cmb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_abc" class="radio" value="cdbank_abc">
+	<label  class="bank_label" for="cdbank_abc"><span class="bank_abc"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_spabank" class="radio" value="cdbank_spabank">
+	<label  class="bank_label" for="cdbank_spabank"><span class="bank_spabank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_sdb" class="radio" value="cdbank_sdb">
+	<label  class="bank_label" for="cdbank_sdb"><span class="bank_sdb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_ceb" class="radio" value="cdbank_ceb">
+	<label  class="bank_label" for="cdbank_ceb"><span class="bank_ceb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_gdb" class="radio" value="cdbank_gdb">
+	<label  class="bank_label" for="cdbank_gdb"><span class="bank_gdb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_cib" class="radio" value="cdbank_cib">
+	<label  class="bank_label" for="cdbank_cib"><span class="bank_cib"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_cmbc" class="radio" value="cdbank_cmbc">
+	<label  class="bank_label" for="cdbank_cmbc"><span class="bank_cmbc"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_hxbank" class="radio" value="cdbank_hxbank">
+	<label  class="bank_label" for="cdbank_hxbank"><span class="bank_hxbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_bjbank" class="radio" value="cdbank_bjbank">
+	<label  class="bank_label" for="cdbank_bjbank"><span class="bank_bjbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_shrcb" class="radio" value="cdbank_shrcb">
+	<label  class="bank_label" for="cdbank_shrcb"><span class="bank_shrcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_nxbank" class="radio" value="cdbank_nxbank">
+	<label  class="bank_label" for="cdbank_nxbank"><span class="bank_nxbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_bod" class="radio" value="cdbank_bod">
+	<label  class="bank_label" for="cdbank_bod"><span class="bank_bod"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_nbbank" class="radio" value="cdbank_nbbank">
+	<label  class="bank_label" for="cdbank_nbbank"><span class="bank_nbbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_dlb" class="radio" value="cdbank_dlb">
+	<label  class="bank_label" for="cdbank_dlb"><span class="bank_dlb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_tccb" class="radio" value="cdbank_tccb">
+	<label  class="bank_label" for="cdbank_tccb"><span class="bank_tccb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_bhb" class="radio" value="cdbank_bhb">
+	<label  class="bank_label" for="cdbank_bhb"><span class="bank_bhb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_jsbank" class="radio" value="cdbank_jsbank">
+	<label  class="bank_label" for="cdbank_jsbank"><span class="bank_jsbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_hzcb" class="radio" value="cdbank_hzcb">
+	<label  class="bank_label" for="cdbank_hzcb"><span class="bank_hzcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_njcb" class="radio" value="cdbank_njcb">
+	<label  class="bank_label" for="cdbank_njcb"><span class="bank_njcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_hsbank" class="radio" value="cdbank_hsbank">
+	<label  class="bank_label" for="cdbank_hsbank"><span class="bank_hsbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_wjrcb" class="radio" value="cdbank_wjrcb">
+	<label  class="bank_label" for="cdbank_wjrcb"><span class="bank_wjrcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_crcbank" class="radio" value="cdbank_crcbank">
+	<label  class="bank_label" for="cdbank_crcbank"><span class="bank_crcbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_srbank" class="radio" value="cdbank_srbank">
+	<label  class="bank_label" for="cdbank_srbank"><span class="bank_srbank"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_gzb" class="radio" value="cdbank_gzb">
+	<label  class="bank_label" for="cdbank_gzb"><span class="bank_gzb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_zjtlcb" class="radio" value="cdbank_zjtlcb">
+	<label  class="bank_label" for="cdbank_zjtlcb"><span class="bank_zjtlcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_czcb" class="radio" value="cdbank_czcb">
+	<label  class="bank_label" for="cdbank_czcb"><span class="bank_czcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_grcb" class="radio" value="cdbank_grcb">
+	<label  class="bank_label" for="cdbank_grcb"><span class="bank_grcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_cdrcb" class="radio" value="cdbank_cdrcb">
+	<label  class="bank_label" for="cdbank_cdrcb"><span class="bank_cdrcb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_cscb" class="radio" value="cdbank_cscb">
+	<label  class="bank_label" for="cdbank_cscb"><span class="bank_cscb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_bojz" class="radio" value="cdbank_bojz">
+	<label  class="bank_label" for="cdbank_bojz"><span class="bank_bojz"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_hkb" class="radio" value="cdbank_hkb">
+	<label  class="bank_label" for="cdbank_hkb"><span class="bank_hkb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_nbyz" class="radio" value="cdbank_nbyz">
+	<label  class="bank_label" for="cdbank_nbyz"><span class="bank_nbyz"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_dyccb" class="radio" value="cdbank_dyccb">
+	<label  class="bank_label" for="cdbank_dyccb"><span class="bank_dyccb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_sdeb" class="radio" value="cdbank_sdeb">
+	<label  class="bank_label" for="cdbank_sdeb"><span class="bank_sdeb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_lzyh" class="radio" value="cdbank_lzyh">
+	<label  class="bank_label" for="cdbank_lzyh"><span class="bank_lzyh"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_bsb" class="radio" value="cdbank_bsb">
+	<label  class="bank_label" for="cdbank_bsb"><span class="bank_bsb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_boqh" class="radio" value="cdbank_boqh">
+	<label  class="bank_label" for="cdbank_boqh"><span class="bank_boqh"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_h3cb" class="radio" value="cdbank_h3cb">
+	<label  class="bank_label" for="cdbank_h3cb"><span class="bank_h3cb"></span></label>
+</li>
+<li>
+	<input type="radio" name="cdbank" id="cdbank_jhbank" class="radio" value="cdbank_jhbank">
+	<label  class="bank_label" for="cdbank_jhbank"><span class="bank_jhbank"></span></label>
+</li>
+
+			</ul>
+			<script>
+			$(function(){
+				$('.bank_list .bank_label').hover(function(){
+					$(this).addClass('hover');
+				},function(){
+					$(this).removeClass('hover');
+				})
+				$('input[type="radio"]').change(function(){
+					var $id = $(this).attr('id'),$name = $(this).attr('name');
+					$('label[for="'+ $id +'"]').addClass("checked").parents('li').siblings().find('label').removeClass('checked');
+				})
+			})
+			</script>		
+		</body>
+		</html>
+		
